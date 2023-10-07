@@ -13,9 +13,9 @@ $CONF['api_server_url'] = "https://ext.hellofunding.co.kr";
 $CONF['customer_mail']       = 'hellofunding@gmail.com';
 $CONF['customer_local_mail'] = 'info@hellofunding.kr';
 $CONF['customer_phone']      = '1588-6760';
-$CONF['admin_sms_number']    = '15886760';			// 고객센터 대표번호
-$CONF['judam_sms_number']    = '15885210';			// 주담대 상담번호
-$CONF['represent']           = '최수석';				// 대표자명
+$CONF['admin_sms_number']    = preg_replace('/(-| )/', '', $CONF['customer_phone']);
+$CONF['judam_sms_number']    = '15885210';
+$CONF['represent']           = '대표자명';
 
 $_admin_sms_number = $CONF['admin_sms_number'];
 
