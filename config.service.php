@@ -107,28 +107,28 @@ $INDI_INVESTOR['1'] = array(
 
 $INDI_INVESTOR['2'] = array(
 	'title'                => '소득적격투자자',
-	'site_limit'           => 100000000,	// 전체한도 (업계한도)
-	'single_product_limit' =>  20000000,	// 단일상품 투자한도
-	'group_product_limit'  =>  20000000,	// 동일차입자그룹상품 투자한도
-	'prpt_limit'           => 100000000		// 부동산 투자한도
+	'site_limit'           => 100000000,
+	'single_product_limit' =>  20000000,
+	'group_product_limit'  =>  20000000,
+	'prpt_limit'           => 100000000
 );
 
 $INDI_INVESTOR['3'] = array(
 	'title'                => '전문투자자',
-	'site_limit'           => 999999999999,		// 전체한도 (업계한도)
-	'single_product_limit' => 999999999999,		// 단일상품 투자한도
-	'group_product_limit'  => 999999999999,		// 동일차입자그룹상품 투자한도
-	'prpt_limit'           => 999999999999,		// 부동산 투자한도
-	'invest_able_perc'     => 40 * 0.01				// 전문투자자 투자건당 최대투자가능금액 (모집금액의 40%)
+	'site_limit'           => 999999999999,
+	'single_product_limit' => 999999999999,
+	'group_product_limit'  => 999999999999,
+	'prpt_limit'           => 999999999999,
+	'invest_able_perc'     => 40 * 0.01		/ 전문투자자 투자건당 최대투자가능금액 (모집금액의 40%)
 );
 
 $CORP_INVESTOR = array(
 	'title'                => '법인투자자',
-	'site_limit'           => 999999999999,		// 전체한도 (업계한도)
-	'single_product_limit' => 999999999999,		// 단일상품 투자한도
-	'group_product_limit'  => 999999999999,		// 동일차입자그룹상품 투자한도
-	'prpt_limit'           => 999999999999,		// 부동산 투자한도
-	'invest_able_perc'     => 40 * 0.01				// 전문투자자 투자건당 최대투자가능금액 (모집금액의 40%) <=== 법인투자자도 적용???
+	'site_limit'           => 999999999999,
+	'single_product_limit' => 999999999999,
+	'group_product_limit'  => 999999999999,
+	'prpt_limit'           => 999999999999,
+	'invest_able_perc'     => 40 * 0.01
 );
 
 
@@ -177,22 +177,18 @@ $locationMapCode = array(
 
 
 // 나이스평가정보 계좌 인증 모듈 서비스 계정
-$CONF['niceUid'] = 'NID100158';				// 고객사에 부여한 구분 id
-$CONF['svcPwd']  = 'funny123@';				// 고객사에 부여한 서비스 이용 패스워드
+$CONF['niceUid'] = 'NID100000';				// 고객사에 부여한 구분 id
+$CONF['svcPwd']  = 'pwd123@';				// 고객사에 부여한 서비스 이용 패스워드
 
 // 나이스평가정보 실명 확인 모듈 서비스 계정
-$CONF['niceSitecode']   = 'AB917';						// NICE로부터 부여받은 사이트 코드
-$CONF['niceSitepasswd'] = '8vJBrEtmUvdb';			// NICE로부터 부여받은 사이트 패스워드
+$CONF['niceSitecode']   = 'AB000';			// NICE로부터 부여받은 사이트 코드
+$CONF['niceSitepasswd'] = '8vJBrEtmXXXX';		/ NICE로부터 부여받은 사이트 패스워드
 
 // 신한은행 계좌발급용
 $CONF['VACT_COMPANY_CODE']['HLP'] = '20007212';		// 예치금신탁계좌 기관코드 (헬로핀테크)
 $CONF['VACT_COMPANY_CODE']['HLC'] = '20007213';		// 상환용가상계좌 기관코드 (헬로크라우드대부)
 
-// 신한은행 점검시간
-$CONF['BANK_STOP_SDATE'] = '2022-08-16 18:00:00';
-$CONF['BANK_STOP_EDATE'] = '2022-08-16 18:20:00';
-
-// 신한은행 일일점검시간
+// 은행 일일점검시간
 $CONF['DAY_BANK_STOP_STIME'] = '23:30:00';
 $CONF['DAY_BANK_STOP_ETIME'] = '00:30:00';
 
@@ -216,11 +212,11 @@ $CONF['STLBANK']['TEST'] = array(
 	'hashkey' => 'ST190808090000000000'
 );
 $CONF['STLBANK']['REAL'] = array(
-	'mid'     => 'M2194198',
+	'mid'     => '',
 	'host'    => 'https://realUrl',
 	'port'    => '443',
-	'authkey' => 'BMKJ4gJD3k0FWZgIOXW6mo404Pw0D5Dk',		// 개인정보 암호키 (32byte)
-	'hashkey' => 'ST2109021540000000000'				// 해시생성 인증키 (20byte)
+	'authkey' => '',			// 개인정보 암호키 (32byte)
+	'hashkey' => ''				// 해시생성 인증키 (20byte)
 );
 
 
@@ -233,7 +229,7 @@ $CONF['P2PCTR_PAUSE']['ETIME'] = '00:30';
 
 
 // [신분증 OCR(유스비)] API 계정 (신분증 OCR 및 진위여부 확인) ★★★ 환경설정 파일 위치 : ~/useb/useb.config.php ★★★
-$CONF['useb']['token_email']  = 'arpino123@hellofunding.co.kr';
+$CONF['useb']['token_email']  = 'test@hellofunding.co.kr';
 $CONF['useb']['token_passwd'] = 'hellofunding';
 
 
