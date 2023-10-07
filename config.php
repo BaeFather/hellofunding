@@ -1,4 +1,7 @@
 <?php
+
+/* 기본환경설정 */
+
 date_default_timezone_set('Asia/Seoul');
 
 /*
