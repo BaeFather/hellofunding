@@ -1,7 +1,7 @@
 <?php
 
 ///////////////////////////////////////////////////////////////////////////////
-// 서비스 설정
+// 서비스 환경설정 설정
 ///////////////////////////////////////////////////////////////////////////////
 // manager.hellofunding.co.kr 에서 저장시 www1으로 1분마다 동기화 실행
 // www1 -> www2 는 디렉토리 동기화 처리되어있음.
@@ -15,7 +15,7 @@ $CONF['customer_local_mail'] = 'info@hellofunding.kr';
 $CONF['customer_phone']      = '1588-6760';
 $CONF['admin_sms_number']    = '15886760';			// 고객센터 대표번호
 $CONF['judam_sms_number']    = '15885210';			// 주담대 상담번호
-$CONF['represent']           = '최수석';				// 대표자명
+$CONF['represent']           = '홍길동';				// 대표자명
 
 $_admin_sms_number = $CONF['admin_sms_number'];
 
@@ -24,159 +24,6 @@ $PRNT_SUBJECT['average_return']    = '평균수익률(연)';
 $PRNT_SUBJECT['total_invest']      = '누적대출액';
 $PRNT_SUBJECT['total_repay']       = '누적상환액';
 $PRNT_SUBJECT['invest_ing_amount'] = '대출잔액';
-
-
-// 상품 등급을 위한 배열 설정(구)
-$_evaluation_grade_array = array();
-$_evaluation_grade_array[15] = 'A1';
-$_evaluation_grade_array[14] = 'A2';
-$_evaluation_grade_array[13] = 'A3';
-$_evaluation_grade_array[12] = 'B1';
-$_evaluation_grade_array[11] = 'B2';
-$_evaluation_grade_array[10] = 'C3';
-$_evaluation_grade_array[9] = 'C1';
-$_evaluation_grade_array[8] = 'C2';
-$_evaluation_grade_array[7] = 'C3';
-$_evaluation_grade_array[6] = 'D1';
-$_evaluation_grade_array[5] = 'D2';
-$_evaluation_grade_array[4] = 'D3';
-$_evaluation_grade_array[3] = 'E1';
-$_evaluation_grade_array[2] = 'E2';
-$_evaluation_grade_array[1] = 'E3';
-
-
-// 상품 등급을 위한 배열 설정(신: 5단체계)
-$_gudge_grade_array = array(
-	'0' => 'D',
-	'1' => 'D', '2' => 'D', '3' => 'D', '4' => 'D', '5' => 'C', '6' => 'C', '7' => 'C', '8' => 'C', '9' => 'B', '10' => 'B',
-	'11' => 'B', '12' => 'B', '13' => 'A', '14' => 'A', '15' => 'A', '16' => 'A', '17' => 'S', '18' => 'S', '19' => 'S', '20' => 'S'
-);
-
-/*
-// 상품 등급을 위한 배열 설정(신: 20단체계)
-$_gudge_grade_array = array(
-  '0' => 'E',
-	'1' => 'E', '2' => 'E', '3' => 'E', '4' => 'E', '5' => 'D3', '6' => 'D2', '7' => 'D1', '8' => 'C3', '9' => 'C2', '10' => 'C1',
-	'11' => 'B3', '12' => 'B2', '13' => 'B1', '14' => 'A3', '15' => 'A2', '16' => 'A1', '17' => 'S', '18' => 'S', '19' => 'S', '20' => 'S'
-);
-*/
-
-$BANK = array(
-	'004' => '국민은행',
-	'081' => 'KEB하나은행',
-	'088' => '신한은행',
-	'071' => '우체국',
-	'011' => '농협은행',
-	'020' => '우리은행',
-	'089' => '케이뱅크',
-	'090' => '카카오뱅크',
-	'092' => '토스뱅크',
-	'007' => '수협중앙회',
-	'023' => 'SC은행',
-	'002' => '산업은행',
-	'003' => '기업은행',
-	'027' => '한국씨티은행',
-	'031' => '대구은행',
-	'032' => '부산은행',
-	'034' => '광주은행',
-	'035' => '제주은행',
-	'037' => '전북은행',
-	'039' => '경남은행',
-	'045' => '새마을금고중앙회',
-	'048' => '신협중앙회',
-	'050' => '상호저축은행',
-	'012' => '지역농․축협',
-	'064' => '산림조합중앙회',
-
-	'102' => '대신저축은행',
-	'103' => '에스비아이저축은행',
-	'104' => '에이치케이저축은행',
-	'105' => '웰컴저축은행',
-	'106' => '신한저축은행',
-
-	'209' => '유안타증권',
-	'218' => 'KB증권(구 현대증권)',
-	'221' => '골든브릿지투자증권',
-	'222' => '한양증권',
-	'223' => '리딩투자증권',
-	'224' => 'BNK투자증권',
-	'225' => 'IBK투자증권',
-	'226' => 'KB증권',
-	'227' => 'KTB투자증권',
-	'230' => '미래에셋증권',
-	'238' => '대우증권',
-	'240' => '삼성증권',
-	'243' => '한국투자증권',
-	'247' => 'NH투자증권',
-	'261' => '교보증권',
-	'262' => '하이투자증권',
-	'263' => 'HMC투자증권',
-	'264' => '키움증권',
-	'265' => '이베스트투자증권',
-	'266' => 'SK증권',
-	'267' => '대신증권',
-	'269' => '한화투자증권',
-	'270' => '하나대투증권',
-	'278' => '신한금융투자',
-	'279' => '동부증권',
-	'280' => '유진투자증권',
-	'287' => '메리츠종합금융증권',
-	'290' => '부국증권',
-	'291' => '신영증권',
-	'292' => '엘아이지투자증권',
-	'293' => '한국증권금융',
-	'294' => '펀드온라인코리아',
-	'295' => '우리종합금융',
-
-//'054' => 'HSBC은행',
-//'055' => '도이치은행',
-//'052' => '모건스탠리은행',
-//'056' => '알비에스피엘씨은행',
-//'057' => '제이피모간체이스은행',
-//'058' => '미즈호은행',
-//'059' => '미쓰비시도쿄UFJ은행',
-//'060' => 'BOA은행',
-//'061' => '비엔피파리바은행',
-//'062' => '중국공상은행',
-//'063' => '중국은행',
-//'065' => '대화은행',
-//'066' => '교통은행',
-
-//'076' => '신용보증기금',
-//'077' => '기술보증기금',
-//'093' => '한국주택금융공사',
-//'094' => '서울보증보험',
-//'095' => '경찰청',
-//'096' => '한국전자금융(주)',
-//'099' => '금융결제원',
-//'001' => '한국은행',
-//'008' => '수출입은행',
-
-//'296' => '삼성선물',
-//'297' => '외환선물',
-//'298' => '현대선물',
-
-//'041' => '우리카드',
-//'044' => '외환카드',
-//'361' => 'BC카드',
-//'367' => '현대카드',
-//'368' => '롯데카드',
-//'366' => '신한카드',
-//'369' => '수협카드',
-//'370' => '씨티카드',
-//'371' => 'NH카드',
-//'374' => '하나SK카드',
-//'381' => 'KB국민카드',
-//'364' => '광주카드',
-//'365' => '삼성카드',
-//'372' => '전북카드',
-//'373' => '제주카드',
-
-//'431' => '미래에셋생명',
-//'452' => '삼성생명',
-//'453' => '흥국생명'
-);
-
 
 // 심사자 리스트
 $JUDGE = array(
@@ -290,22 +137,22 @@ $CONF['old_type_end_date']     = $CONF['loan_guideline_date1'];
 $CONF['old_type_end_prdt_idx'] = '135';
 
 // 투자금 설정
-$CONF['min_invest_limit'] = 10000;			// 최소투자금액단위
+$CONF['min_invest_limit'] = 10000;					// 최소투자금액단위
 $CONF['max_invest_limit'] = '';
 
 
 // 상환방식 정의
-define('REPAY_METHOD_ALL', '1');								// 만기일시상환
-define('REPAY_METHOD_PRINCIPLE', '2');					// 원리금균등상환
+define('REPAY_METHOD_ALL', '1');					// 만기일시상환
+define('REPAY_METHOD_PRINCIPLE', '2');				// 원리금균등상환
 define('REPAY_METHOD_PRINCIPLE_EQUAL', '3');		// 원금균등상환
 
 // 투자방식 정의
-define('INVEST_TYPE_ESTATE', '1');							// 부동산 담보
-define('INVEST_TYPE_STATE', '2');								// 동산담보
+define('INVEST_TYPE_ESTATE', '1');					// 부동산 담보
+define('INVEST_TYPE_STATE', '2');					// 동산담보
 define('INVEST_TYPE_PERSONAL_CREDIT', '3');			// 개인신용
 define('INVEST_TYPE_BUSINESS_CREDIT', '4');			// 사업자신용
-define('INVEST_TYPE_PORTFOLIO', '5');						// 포토폴리오
-define('INVEST_TYPE_ETC', '6');									// 기타신용
+define('INVEST_TYPE_PORTFOLIO', '5');				// 포토폴리오
+define('INVEST_TYPE_ETC', '6');						// 기타신용
 
 // 지역코드
 $locationMapCode = array( // 세종이 없음
@@ -329,22 +176,18 @@ $locationMapCode = array( // 세종이 없음
 
 
 // 나이스평가정보 계좌 인증 모듈 서비스 계정
-$CONF['niceUid'] = 'NID100158';				// 고객사에 부여한 구분 id
-$CONF['svcPwd']  = 'funny123@';				// 고객사에 부여한 서비스 이용 패스워드
+$CONF['niceUid'] = 'NID000000';				// 고객사에 부여한 구분 id
+$CONF['svcPwd']  = 'passwd123@';			// 고객사에 부여한 서비스 이용 패스워드
 
 // 나이스평가정보 실명 확인 모듈 서비스 계정
-$CONF['niceSitecode']   = 'AB917';						// NICE로부터 부여받은 사이트 코드
+$CONF['niceSitecode']   = 'AB---';						// NICE로부터 부여받은 사이트 코드
 $CONF['niceSitepasswd'] = '8vJBrEtmUvdb';			// NICE로부터 부여받은 사이트 패스워드
 
 // 신한은행 계좌발급용
-$CONF['VACT_COMPANY_CODE']['HLP'] = '20007212';		// 예치금신탁계좌 기관코드 (헬로핀테크)
-$CONF['VACT_COMPANY_CODE']['HLC'] = '20007213';		// 상환용가상계좌 기관코드 (헬로크라우드대부)
+$CONF['VACT_COMPANY_CODE']['HLP'] = '20001111';		// 예치금신탁계좌 기관코드 (헬로핀테크)
+$CONF['VACT_COMPANY_CODE']['HLC'] = '20001112';		// 상환용가상계좌 기관코드 (헬로크라우드대부)
 
-// 신한은행 점검시간
-$CONF['BANK_STOP_SDATE'] = '2022-08-16 18:00:00';
-$CONF['BANK_STOP_EDATE'] = '2022-08-16 18:20:00';
-
-// 신한은행 일일점검시간
+// 은행 일일점검시간
 $CONF['DAY_BANK_STOP_STIME'] = '23:30:00';
 $CONF['DAY_BANK_STOP_ETIME'] = '00:30:00';
 
@@ -358,7 +201,7 @@ $CONF['IB_REPAY_REQ'] = array(
 );
 
 // 세틀뱅크 계좌점유인증(1원이체인증)			※ 출금이체 제한조건 : 계좌당 5회/일 (요청시 증가 가능하다고 하며, 개발단/상용단에서의 조건은 동일함)
-$stbk_mode = 'REAL';	// 상용모드		(라이브러리에서 호출되므로 변수명 변경금지)
+$stbk_mode = 'TEST';	// 상용모드		(라이브러리에서 호출되므로 변수명 변경금지)
 
 $CONF['STLBANK']['TEST'] = array(
 	'mid'     => 'M2194041',
@@ -367,26 +210,18 @@ $CONF['STLBANK']['TEST'] = array(
 	'authkey' => 'SETTLEBANKISGOODSETTLEBANKISGOOD',
 	'hashkey' => 'ST190808090913247723'
 );
-$CONF['STLBANK']['REAL'] = array(
-	'mid'     => 'M2194198',
-	'host'    => 'https://npay.settlebank.co.kr',
-	'port'    => '443',
-	'authkey' => 'BMKJ4gJD3k0FWZgIOXW6mo404Pw0D5Dk',		// 개인정보 암호키 (32byte)
-	'hashkey' => 'ST2109021540352804899'								// 해시생성 인증키 (20byte)
-);
-
 
 // [중앙기록관리] API 계정
 $CONF['p2pctr']['host'] = 'https://openapi.p2pcenter.or.kr/v1.0/';
-$CONF['p2pctr']['code']	= 'K210500031';				// 헬로핀테크 기관코드(상용)
+$CONF['p2pctr']['code']	= 'K21-------';				// 헬로핀테크 기관코드(상용)
 // [중앙기록관리] API 점검시간
 $CONF['P2PCTR_PAUSE']['STIME'] = '23:20';
 $CONF['P2PCTR_PAUSE']['ETIME'] = '00:30';
 
 
 // [신분증 OCR(유스비)] API 계정 (신분증 OCR 및 진위여부 확인) ★★★ 환경설정 파일 위치 : ~/useb/useb.config.php ★★★
-$CONF['useb']['token_email']  = 'arpino123@hellofunding.co.kr';
-$CONF['useb']['token_passwd'] = 'hellofunding';
+$CONF['useb']['token_email']  = '-------@hellofunding.co.kr';
+$CONF['useb']['token_passwd'] = 'password';
 
 
 // 신디케이션 회원 : 배열키값은 DB필드명과 매칭시켜줄 것 (와우스타는 예외임)
@@ -512,54 +347,33 @@ $WITHDRAWAL_BYPASS_USER = array(
 );
 
 
-// 서버비상상황 일때 문자알림 수신번호 설정
+// 서버 비정상 일때 문자알림 수신번호 설정
 $CONF['event_receive_phone'] = array(
 	'01064063972',
-	'01086246176',
-	'01088944740',
-	'01090838172',
-	'01050297528',
-  '01044265733'
+	'01012345678',
+	'01011112222'
 );
 
 // 개발자 회원
 $CONF['DEVELOPER'] = array(
-	'sori9th',		// 배재수
-	'romrom',			// 전승찬
+	'sori9th',
+	'romrom',
 );
 
 // 내부 운영가능 권한회원 (정산페이지 기능 운용가능)
 $CONF['OPERATOR'] = array(
 	'admin_sori9th',
-	'admin_hellosiesta',	// 이상규
-	'admin_sundol4',			// 이철규
-//'admin_foolish34',		// 정현빈
-	'admin_hokudo',				// 조윤주
-	'admin_eksql71',			// 김단비
-	'keejoy1',						// 이기륜
-	'admin_hello9414',		// 김정은
-	'admin_tnqls3605',		// 김수빈
-	'admin_jihye6898',		// 이지혜
-	'admin_gammee62',			// 김인
-	'admin_rhksdn2207',		// 김관우
+	'admin_hellosiesta',
+	'admin_sundol4',
 );
 
 // 내부 테스트 회원
 $CONF['GOODS_OFFICER'] = array(
 	'hellofunding',			// 헬로펀딩 투심위
-	'outbound',					// 외부관리자
-	'hellosiesta',			// 이상규
-	'sundol4',					// 이철규
-	'andcl76',					// 최선희
-//'foolish34',				// 정현빈
-	'eksql71',					// 김단비
-	'sori9th',					// 배재수
-	'romrom',						// 전승찬
-	'keejoy',						// 이기륜
-	'hello9414',				// 김정은
-	'jihye6898',				// 이지혜
-	'tnqls3605',				// 김수빈
-	'yr022801',					// 고상희 차장
+	'outbound',				// 외부관리자
+	'sori9th',				// 관리자1
+	'hellosiesta',			// 관리자2
+	'romrom',				// 관리자3
 );
 
 // 사용자 시뮬레이션 가능 회원
@@ -567,18 +381,15 @@ $CONF['SECRET_LOGIN_USER'] = array(
 	'admin_hellosiesta',
 	'admin_sori9th',
 	'admin_romrom',
-	'admin_supermario',
-	'admin_sundol4',
-//'admin_foolish34'
 );
 
 // 회원가입테스트 (개인 중복가입 허용 휴대번호)
 $CONF['JOIN_TEST_HP'] = array(
-	'01056179090',	// 류재영
-//'01032809295',	// 최선희
-//'01067241409',	// 이철규
-//'01043380580',	// 정현빈
-//'01064063972',	// 배재수
+	'01056179090',
+	'01032809295',
+	'01067241409',
+	'01043380580',
+	'01064063972',
 );
 
 
@@ -604,19 +415,6 @@ $idpw_type = 'hard';		// 현재사용할 아이디/비번 조합 난이도
 $CONF['oligo_report_url'] = 'https://m.mycereal.co.kr:8443';
 
 
-/*
-3023                           ::: 정상이자 지급:2020-08-05 / 원금,연체이자 지급:2020-08-10
-3187,3194,3201                 ::: 정상이자 지급:2020-09-07 / 원금,연체이자 지급:2020-09-10
-3215,3223,3224                 ::: 정상이자 지급:2020-09-07 / 원금,연체이자 지급:2020-09-15
-3315,3324,3334,3341,3359,3382  ::: 정상이자 지급:2020-10-05
-3515,3538,3575,3638'           ::: 정상이자 지급:2020-11-05
-*/
-$CONF['OVDPRDT'] = array(
-	'3023','3187','3194','3201','3215','3223','3224','3315','3334','3324','3341','3359','3382','3391',
-	'3515','3538','3575','3638'
-);
-
-
 // 모바일앱 구분
 if( @$_SERVER['HTTP_X_REQUESTED_WITH']=='kr.webadsky.hellofunding' || @base64_decode($_GET[md5('token')]) || @base64_decode($_GET[md5('ver')]) ) {
 	$CONF['flatform'] = 'app';
@@ -630,28 +428,87 @@ if( @$_SERVER['HTTP_X_REQUESTED_WITH']=='kr.webadsky.hellofunding' || @base64_de
 	}
 }
 
+// 앱 다운로드 경로 설정
 if( @preg_match("/chrome|android/i", $_SERVER['HTTP_USER_AGENT']) ) {
 	$CONF['app_install_url'] = 'https://play.google.com/store/apps/details?id=kr.webadsky.hellofunding';
-//$CONF['app_install_url'] = 'market://details?id=kr.webadsky.hellofunding';
-//$CONF['app_install_url'] = 'intent://scan/#Intent;scheme=zxing;package=kr.webadsky.hellofunding.client.android;end';
 }
 else if( @preg_match("/(iphone|ipad)/i", $_SERVER['HTTP_USER_AGENT']) ) {
 	$CONF['app_install_url'] = 'itms-apps://itunes.apple.com/kr/app/apple-store/id1447067245';
-	//https://itunes.apple.com/app/id1447067245
 }
-
-
 
 // 관리자 페이지 외부접속 허용 스위치 (false -> 외부에서 관리자접속시 관리자별 allow_location 에 따라 문자인증 후 접속가능 / true : 외부에서 관리자 바로 접속가능)
 $CONF['bypass_admin_outer_connect'] = false;
-//if($_REQUEST['REMOTE_ADDR']=='115.21.113.102') $CONF['bypass_admin_outer_connect'] = false;
-
 
 $kyc_test_member = array('sori9th','sori9th2','kakyo0812','hellosiesta','romrom','sundol4','foolish34','eksql71','ysm1351');
 
-
 $CONF['loading_time_check'] = 0;		//페이지 로딩타임체커 0: OFF, 1: ON
 
-// 중요: 유스비 이용불가 공지 발생시 대처 : member_new/kyc_alim_step0.php 에 스크립트 및 시간설정 !!!!
+$BANK = array(
+	'004' => '국민은행',
+	'081' => 'KEB하나은행',
+	'088' => '신한은행',
+	'071' => '우체국',
+	'011' => '농협은행',
+	'020' => '우리은행',
+	'089' => '케이뱅크',
+	'090' => '카카오뱅크',
+	'092' => '토스뱅크',
+	'007' => '수협중앙회',
+	'023' => 'SC은행',
+	'002' => '산업은행',
+	'003' => '기업은행',
+	'027' => '한국씨티은행',
+	'031' => '대구은행',
+	'032' => '부산은행',
+	'034' => '광주은행',
+	'035' => '제주은행',
+	'037' => '전북은행',
+	'039' => '경남은행',
+	'045' => '새마을금고중앙회',
+	'048' => '신협중앙회',
+	'050' => '상호저축은행',
+	'012' => '지역농․축협',
+	'064' => '산림조합중앙회',
+
+	'102' => '대신저축은행',
+	'103' => '에스비아이저축은행',
+	'104' => '에이치케이저축은행',
+	'105' => '웰컴저축은행',
+	'106' => '신한저축은행',
+
+	'209' => '유안타증권',
+	'218' => 'KB증권(구 현대증권)',
+	'221' => '골든브릿지투자증권',
+	'222' => '한양증권',
+	'223' => '리딩투자증권',
+	'224' => 'BNK투자증권',
+	'225' => 'IBK투자증권',
+	'226' => 'KB증권',
+	'227' => 'KTB투자증권',
+	'230' => '미래에셋증권',
+	'238' => '대우증권',
+	'240' => '삼성증권',
+	'243' => '한국투자증권',
+	'247' => 'NH투자증권',
+	'261' => '교보증권',
+	'262' => '하이투자증권',
+	'263' => 'HMC투자증권',
+	'264' => '키움증권',
+	'265' => '이베스트투자증권',
+	'266' => 'SK증권',
+	'267' => '대신증권',
+	'269' => '한화투자증권',
+	'270' => '하나대투증권',
+	'278' => '신한금융투자',
+	'279' => '동부증권',
+	'280' => '유진투자증권',
+	'287' => '메리츠종합금융증권',
+	'290' => '부국증권',
+	'291' => '신영증권',
+	'292' => '엘아이지투자증권',
+	'293' => '한국증권금융',
+	'294' => '펀드온라인코리아',
+	'295' => '우리종합금융',
+);
 
 ?>
