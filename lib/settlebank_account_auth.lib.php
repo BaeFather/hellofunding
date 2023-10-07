@@ -1,20 +1,20 @@
 <?
 ###############################################################################\
-## 세틀뱅크 계좌점유인증 API 활용 함수
+## 세틀뱅크 계좌점유인증 API 연동 함수
 ###############################################################################\
 /*
 API 서버 URL
 	테스트베드	https://tbnpay.settlebank.co.kr
-	상용 환경		https://npay.settlebank.co.kr
+	상용 환경	https://npay.settlebank.co.kr
 
 인증 서비스
-	예금주성명조회Ⅰ				https://npay.settlebank.co.kr/v1/api/auth/acnt/ownercheck1
-	계좌점유인증						https://npay.settlebank.co.kr/v1/api/auth/acnt/ownership/req
-	계좌점유인증확인				https://npay.settlebank.co.kr/v1/api/auth/ownership/check
+	예금주성명조회	https://npay.settlebank.co.kr/v1/api/auth/acnt/ownercheck1
+	계좌점유인증	https://npay.settlebank.co.kr/v1/api/auth/acnt/ownership/req
+	계좌점유인증확인	https://npay.settlebank.co.kr/v1/api/auth/ownership/check
 
 조회 서비스
-	계좌점유인증내역조회		https://npay.settlebank.co.kr/v1/api/auth/ownership/translist
-	은행점검조회						https://npay.settlebank.co.kr/v1/api/bank/timecheck/detail
+	계좌점유인증내역조회	https://npay.settlebank.co.kr/v1/api/auth/ownership/translist
+	은행점검조회		https://npay.settlebank.co.kr/v1/api/bank/timecheck/detail
 
 개인정보암호화키 :
 	테스트용 : SETTLEBANKISGOODSETTLEBANKISGOOD (32byte)
