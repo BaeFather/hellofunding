@@ -1,0 +1,37 @@
+<?
+include_once('./_common.php');
+?>
+<?
+include_once (G5_ADMIN_PATH.'/admin.head.php');
+?>
+<div class="tbl_head02 tbl_wrap">
+회원번호 <input type="text" name="member_idx" id="member_idx" class="input-sm" style="width:200px;"/>
+<button onclick="get_ci($('#member_idx').val())" class="btn btn-md btn-default" >CI 조회</button>
+<br/><br/>
+CI <input type="text" name="member_ic" id="member_ci" class="input-sm" style="width:700px;"/>
+</div>
+
+<script>
+function get_ci(member_idx) {
+
+	$.ajax({
+		url : "/adm/member/get_nice_ci.php",
+		type : 'post',
+		data : {'member_idx': member_idx},
+		dataType : "json",
+
+		success: function(data, textStatus, jqXHR){
+			console.log(data);	
+			$("#member_ci").val(data["ci"]);
+	
+		},
+		error: function (jqXHR, textStatus, errorThrown)	{
+
+		}
+	});
+}
+</script>
+
+<?
+include_once (G5_ADMIN_PATH.'/admin.tail.php');
+?>
