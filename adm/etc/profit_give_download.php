@@ -640,7 +640,7 @@ for($i=0,$j=1; $i<$list_count; $i++,$j++) {
 
 
 
-// 활성 시트 색인을 첫 번째 시트로 설정하면 Excel이 이를 첫 번째 시트로 연다.
+// 활성 시트 색인을 첫 번째 시트로 설정하면 Excel이 이를 첫 번째 시트로 엽니다.
 $objPHPExcel->setActiveSheetIndex(0);
 
 
